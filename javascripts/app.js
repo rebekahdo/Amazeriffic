@@ -2,15 +2,11 @@ var main = function (toDoObjects) {
     "use strict";
 
     var toDos = toDoObjects.map(function (toDo) {
-          // we'll just return the description
-          // of this toDoObject
           return toDo.description;
     });
 
     $(".tabs a span").toArray().forEach(function (element) {
         var $element = $(element);
-
-        // create a click handler for this element
         $element.on("click", function () {
             var $content,
                 $input,
@@ -83,7 +79,6 @@ var main = function (toDoObjects) {
                                  
                     toDoObjects.push({"description":description, "tags":tags});
 
-                    // update toDos
                     toDos = toDoObjects.map(function (toDo) {
                         return toDo.description;
                     });
